@@ -1,0 +1,6 @@
+framework module Pods_exam_bare {
+  umbrella header "Pods-exam-bare-umbrella.h"
+
+  export *
+  module * { export * }
+}
