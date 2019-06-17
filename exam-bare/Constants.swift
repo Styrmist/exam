@@ -15,4 +15,5 @@ class Constants {
     static let genericErrorMessage = "Something went wrong, please try again."
     static let defaultImage = "https://screenshotlayer.com/images/assets/placeholder.png"
     static var savedBeer = [String]()
+    
 }

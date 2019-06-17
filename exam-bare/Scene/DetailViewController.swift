@@ -17,6 +17,8 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var locationMap: MKMapView!
     @IBOutlet weak var neighboursTableView: UITableView!
     
+    var countryData: CountriesModel.Country?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

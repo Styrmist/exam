@@ -12,10 +12,9 @@ class APIManager {
     
     private let sessionManager: SessionManager
     
-    func call<T>(type: EndPointType, params: Parameters? = nil, handler: @escaping (Swift.Result<T, AlertMessage>) -> Void) where T: Codable {
+    func call<T>(type: EndPointType, handler: @escaping (Swift.Result<T, AlertMessage>) -> Void) where T: Codable {
         self.sessionManager.request(type.url,
                                     method: type.httpMethod,
-                                    parameters: params,
                                     encoding: type.encoding,
                                     headers: type.headers).validate().responseString() { (data) in
                                         do {
@@ -33,6 +32,15 @@ class APIManager {
                                             handler(.failure(self.parseApiError(data: data.data)))
                                         }
         }
+    }
+    
+    func getFlag(country:String) -> String {
+        let base : UInt32 = 127397
+        var s = ""
+        for v in country.unicodeScalars {
+            s.unicodeScalars.append(UnicodeScalar(base + v.value)!)
+        }
+        return String(s)
     }
     
     private func parseApiError(data: Data?) -> AlertMessage {

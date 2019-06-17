@@ -110,7 +110,7 @@
                                     <outlet property="flagImage" destination="u5a-yj-boa" id="lFv-zV-4fD"/>
                                     <outlet property="nameLatinLabel" destination="xyD-zg-Fie" id="Xcu-ZB-69n"/>
                                     <outlet property="nameOriginLabel" destination="VPF-JO-KMS" id="js2-bm-IFw"/>
-                                    <segue destination="2Gg-eW-JDd" kind="show" id="BSk-vS-rgk"/>
+                                    <segue destination="2Gg-eW-JDd" kind="show" identifier="toDetailSegue" id="BSk-vS-rgk"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

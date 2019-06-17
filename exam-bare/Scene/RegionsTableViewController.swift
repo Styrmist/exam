@@ -74,8 +74,8 @@ class RegionsTableViewController: UITableViewController {
                 self.apiManager.call(type: requestType) { (res: Swift.Result<[CountriesModel.Country], AlertMessage>) in
                     switch res {
                     case .success(let countries):
-                        countriesTVC.countries.append(contentsOf: countries)
-                        countriesTVC.tableView.reloadData()
+                        countriesTVC.countriesData.append(contentsOf: countries)
+                        countriesTVC.tableView.reloadData()                        
                         break
                     case .failure(let message):
                         print("alert \(message.title) \(message.body)")
