@@ -34,15 +34,6 @@ class APIManager {
         }
     }
     
-    func getFlag(country:String) -> String {
-        let base : UInt32 = 127397
-        var s = ""
-        for v in country.unicodeScalars {
-            s.unicodeScalars.append(UnicodeScalar(base + v.value)!)
-        }
-        return String(s)
-    }
-    
     private func parseApiError(data: Data?) -> AlertMessage {
         let decoder = JSONDecoder()
         if let jsonData = data, let error = try? decoder.decode(NetworkError.self, from: jsonData) {

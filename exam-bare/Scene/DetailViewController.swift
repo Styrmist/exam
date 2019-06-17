@@ -19,9 +19,14 @@ class DetailViewController: UIViewController {
     
     var countryData: CountriesModel.Country?
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = countryData?.name
+        let emojiFlag: String = getFlag(country: countryData!.alpha2Code)
+        flagImage.image = emojiFlag.emojiToImage()
+        currenciesLabel.text = (countryData?.currencies.flatMap { $0.code })?.joined(separator: ", ")
+        languagesLabel.text = countryData?.languages.flatMap { $0.name }.joined(separator: ", ")
+        
     }
     
 

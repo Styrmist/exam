@@ -57,13 +57,13 @@ class RegionsTableViewController: UITableViewController {
         if segue.identifier == "toCountriesSegue" {
             if let cellIndex = self.tableView.indexPathForSelectedRow {
                 
-                var requestType: RequestItemsType
+                var region: String
                 switch cellIndex.section {
                 case 0:
-                    requestType = RequestItemsType.searchByRegion(query: regions[cellIndex.row])
+                    region = regions[cellIndex.row]
                     break
                 case 1:
-                    requestType = RequestItemsType.searchByBlock(query: regionBlocks[cellIndex.row])
+                    region = regionBlocks[cellIndex.row]
                     break
                 default:
                     return
@@ -71,10 +71,11 @@ class RegionsTableViewController: UITableViewController {
                 
                 let countriesTVC = segue.destination as! CountriesTableViewController
                 
-                self.apiManager.call(type: requestType) { (res: Swift.Result<[CountriesModel.Country], AlertMessage>) in
+                self.apiManager.call(type: RequestItemsType.searchByBlock(query: region)) { (res: Swift.Result<[CountriesModel.Country], AlertMessage>) in
                     switch res {
                     case .success(let countries):
                         countriesTVC.countriesData.append(contentsOf: countries)
+                        countriesTVC.region = region
                         countriesTVC.tableView.reloadData()                        
                         break
                     case .failure(let message):

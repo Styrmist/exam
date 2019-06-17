@@ -12,11 +12,13 @@ import Alamofire
 class CountriesTableViewController: UITableViewController {
 
     var countriesData = [CountriesModel.Country]()
+    var region = ""
     let cellIdentifier = "countryCell"
     let apiManager = APIManager(sessionManager: SessionManager())
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = region
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -31,9 +33,19 @@ class CountriesTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! CountryLatinOriginTableViewCell
         cell.nameLatinLabel.text = countriesData[indexPath.row].name
         cell.nameOriginLabel.text = countriesData[indexPath.row].nativeName
-        cell.flagImage.image = apiManager.getFlag(country: countriesData[indexPath.row].alpha2Code).emojiToImage()
+        cell.flagImage.image = getFlag(country: countriesData[indexPath.row].alpha2Code).emojiToImage()
         return cell
     }
 
-
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetailSegue" {
+            if let cellIndex = self.tableView.indexPathForSelectedRow {
+                let detailVC = segue.destination as! DetailViewController
+    
+                detailVC.countryData = countriesData[cellIndex.row]
+                
+            }
+        }
+    }
 }

@@ -16,6 +16,7 @@
 		ED57DCEC22B781AE005C66C6 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED57DCEB22B781AE005C66C6 /* NetworkError.swift */; };
 		ED57DCEE22B7827B005C66C6 /* CountriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED57DCED22B7827B005C66C6 /* CountriesModel.swift */; };
 		EDA4AF3422B7FA18005BD026 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA4AF3322B7FA18005BD026 /* String.swift */; };
+		EDA4AF3622B804BD005BD026 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA4AF3522B804BD005BD026 /* Utils.swift */; };
 		EDDB19F622B6DA2B00B0F498 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDB19F522B6DA2B00B0F498 /* AppDelegate.swift */; };
 		EDDB19FB22B6DA2B00B0F498 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDDB19F922B6DA2B00B0F498 /* Main.storyboard */; };
 		EDDB19FD22B6DA2C00B0F498 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDDB19FC22B6DA2C00B0F498 /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 		ED57DCEB22B781AE005C66C6 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		ED57DCED22B7827B005C66C6 /* CountriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesModel.swift; sourceTree = "<group>"; };
 		EDA4AF3322B7FA18005BD026 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		EDA4AF3522B804BD005BD026 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		EDDB19F222B6DA2B00B0F498 /* exam-bare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "exam-bare.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDDB19F522B6DA2B00B0F498 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDDB19FA22B6DA2B00B0F498 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 			children = (
 				EDDB19F522B6DA2B00B0F498 /* AppDelegate.swift */,
 				ED57DCDC22B77ABE005C66C6 /* Constants.swift */,
+				EDA4AF3522B804BD005BD026 /* Utils.swift */,
 				ED57DCDB22B77A5A005C66C6 /* Scene */,
 				ED57DCDE22B77AE1005C66C6 /* Extensions */,
 				ED57DCDF22B77AFA005C66C6 /* Models */,
@@ -298,6 +301,7 @@
 				ED57DCE222B77C82005C66C6 /* EndPointType.swift in Sources */,
 				ED57DCDD22B77ABE005C66C6 /* Constants.swift in Sources */,
 				EDDB1A1422B6E85A00B0F498 /* FavouriteTableViewController.swift in Sources */,
+				EDA4AF3622B804BD005BD026 /* Utils.swift in Sources */,
 				ED57DCE822B780F0005C66C6 /* ApiManager.swift in Sources */,
 				EDDB1A1822B6EE4E00B0F498 /* DetailViewController.swift in Sources */,
 				ED57DCEE22B7827B005C66C6 /* CountriesModel.swift in Sources */,
