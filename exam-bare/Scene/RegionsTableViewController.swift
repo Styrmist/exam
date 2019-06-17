@@ -61,8 +61,10 @@ class RegionsTableViewController: UITableViewController {
                 switch cellIndex.section {
                 case 0:
                     requestType = RequestItemsType.searchByRegion(query: regions[cellIndex.row])
+                    break
                 case 1:
                     requestType = RequestItemsType.searchByBlock(query: regionBlocks[cellIndex.row])
+                    break
                 default:
                     return
                 }
@@ -73,9 +75,10 @@ class RegionsTableViewController: UITableViewController {
                     switch res {
                     case .success(let countries):
                         countriesTVC.countries.append(contentsOf: countries)
+                        countriesTVC.tableView.reloadData()
                         break
                     case .failure(let message):
-                        print("alert \(message.body)")
+                        print("alert \(message.title) \(message.body)")
                         break
                     }
                 }

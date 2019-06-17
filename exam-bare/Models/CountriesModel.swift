@@ -12,22 +12,23 @@ enum CountriesModel {
     
     struct Country: Codable {
         let name: String
-        let latlng: [Int]
-        let borders: [String?] //alpha 3 code
+        let latlng: [Double]
+        let borders: [String] //alpha 3 codes
         let nativeName: String
+        let alpha2Code: String
         let currencies: [Currency]
         let languages: [Language]
         //capital?
     }
     
     struct Currency: Codable {
-        let code: String
-        let name: String
-        let symbol: String
+        let code: String?
+        let name: String?
+        let symbol: String?
     }
     
     struct Language: Codable {
-        let name: String
-        let nativeName: String
+        let name: String?
+        let nativeName: String?
     }
 }

@@ -63,12 +63,12 @@
         <scene sceneID="xi1-dE-QfR">
             <objects>
                 <tableViewController id="w2J-aN-zLI" customClass="CountriesTableViewController" customModule="exam_bare" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="U4b-eL-MU2">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="U4b-eL-MU2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="countryCell" rowHeight="120" id="3WZ-G4-rch" customClass="CountryLatinOriginTableViewCell" customModule="exam_bare" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="countryCell" id="3WZ-G4-rch" customClass="CountryLatinOriginTableViewCell" customModule="exam_bare" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3WZ-G4-rch" id="n2I-02-Cyg">
@@ -82,20 +82,14 @@
                                                 <constraint firstAttribute="width" constant="100" id="wEI-rE-rs4"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xyD-zg-Fie">
-                                            <rect key="frame" x="120" y="15" width="42" height="21"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="21" id="5tF-hd-0Q7"/>
-                                            </constraints>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xyD-zg-Fie">
+                                            <rect key="frame" x="120" y="15" width="42" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VPF-JO-KMS">
-                                            <rect key="frame" x="120" y="46" width="42" height="21"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="21" id="psB-x0-gQv"/>
-                                            </constraints>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VPF-JO-KMS">
+                                            <rect key="frame" x="120" y="66.5" width="42" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -104,12 +98,12 @@
                                     <constraints>
                                         <constraint firstItem="xyD-zg-Fie" firstAttribute="top" secondItem="n2I-02-Cyg" secondAttribute="top" constant="15" id="0yT-Sk-CJ2"/>
                                         <constraint firstItem="xyD-zg-Fie" firstAttribute="leading" secondItem="u5a-yj-boa" secondAttribute="trailing" constant="10" id="3Ut-tc-r5h"/>
+                                        <constraint firstItem="VPF-JO-KMS" firstAttribute="top" secondItem="n2I-02-Cyg" secondAttribute="top" constant="66.5" id="4Gw-uX-Vx3"/>
                                         <constraint firstItem="VPF-JO-KMS" firstAttribute="leading" secondItem="u5a-yj-boa" secondAttribute="trailing" constant="10" id="Ddf-X6-2Ki"/>
-                                        <constraint firstAttribute="trailing" secondItem="xyD-zg-Fie" secondAttribute="trailing" constant="252" id="PCY-uM-jZr"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xyD-zg-Fie" secondAttribute="trailing" constant="20" id="PCY-uM-jZr"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="VPF-JO-KMS" secondAttribute="trailing" constant="20" id="UhL-BO-mGf"/>
                                         <constraint firstItem="u5a-yj-boa" firstAttribute="top" secondItem="n2I-02-Cyg" secondAttribute="top" constant="10" id="hSn-BB-hLD"/>
-                                        <constraint firstAttribute="trailing" secondItem="VPF-JO-KMS" secondAttribute="trailing" constant="252" id="jAA-Q5-gd0"/>
                                         <constraint firstItem="u5a-yj-boa" firstAttribute="leading" secondItem="n2I-02-Cyg" secondAttribute="leading" constant="10" id="oyI-40-kUh"/>
-                                        <constraint firstItem="VPF-JO-KMS" firstAttribute="top" secondItem="xyD-zg-Fie" secondAttribute="bottom" constant="10" id="yhW-bO-lyq"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -128,7 +122,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SQ9-6C-IRq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2384" y="122"/>
+            <point key="canvasLocation" x="2382.608695652174" y="121.875"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="tHw-t3-KLN">
@@ -493,6 +487,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="MkG-Ff-oNu"/>
+        <segue reference="BSk-vS-rgk"/>
     </inferredMetricsTieBreakers>
 </document>

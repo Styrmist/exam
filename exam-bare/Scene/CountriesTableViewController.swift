@@ -11,31 +11,27 @@ import UIKit
 class CountriesTableViewController: UITableViewController {
 
     var countries = [CountriesModel.Country]()
+    let cellIdentifier = "countryCell"
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
-    // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return countries.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! CountryLatinOriginTableViewCell
+        cell.nameLatinLabel.text = countries[indexPath.row].name
+        cell.nameOriginLabel.text = countries[indexPath.row].nativeName
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.

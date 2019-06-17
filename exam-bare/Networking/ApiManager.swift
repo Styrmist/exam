@@ -7,6 +7,7 @@
 //
 
 import Alamofire
+import SwiftyJSON
 class APIManager {
     
     private let sessionManager: SessionManager
@@ -16,7 +17,7 @@ class APIManager {
                                     method: type.httpMethod,
                                     parameters: params,
                                     encoding: type.encoding,
-                                    headers: type.headers).validate().responseData() { (data) in
+                                    headers: type.headers).validate().responseString() { (data) in
                                         do {
                                             guard let jsonData = data.data else {
                                                 throw AlertMessage(title: "Error", body: "No data")

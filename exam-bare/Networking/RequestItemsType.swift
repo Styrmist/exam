@@ -35,7 +35,7 @@ extension RequestItemsType: EndPointType {
         case .searchByBlock(let query):
             return "/regionalbloc/\(query)"
         case .searchByRegion(let query):
-            return "region/\(query)"
+            return "/region/\(query)"
         case .searchByFullName(let query):
             return "/name/\(query)?fullText=true"
         case .searchByCode(let query):
