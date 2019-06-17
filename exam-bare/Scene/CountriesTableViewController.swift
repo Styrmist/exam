@@ -10,6 +10,8 @@ import UIKit
 
 class CountriesTableViewController: UITableViewController {
 
+    var countries = [CountriesModel.Country]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import Alamofire
 
 class RegionsTableViewController: UITableViewController {
 
     let regions = ["Africa", "Americas", "Asia", "Europe", "Oceania"]
     let regionBlocks = ["EU", "EFTA", "CARICOM", "PA", "AU", "USAN", "EEU", "AL", "ASEAN", "CAIS", "CEFTA", "NAFTA", "SAARC"]
     let cellIdentifier = "regionCell"
+    let apiManager = APIManager(sessionManager: SessionManager())
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -48,12 +51,35 @@ class RegionsTableViewController: UITableViewController {
         return cell
     }
 
-    /*
     // MARK: - Navigation
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "toCountriesSegue" {
+            if let cellIndex = self.tableView.indexPathForSelectedRow {
+                
+                var requestType: RequestItemsType
+                switch cellIndex.section {
+                case 0:
+                    requestType = RequestItemsType.searchByRegion(query: regions[cellIndex.row])
+                case 1:
+                    requestType = RequestItemsType.searchByBlock(query: regionBlocks[cellIndex.row])
+                default:
+                    return
+                }
+                
+                let countriesTVC = segue.destination as! CountriesTableViewController
+                
+                self.apiManager.call(type: requestType) { (res: Swift.Result<[CountriesModel.Country], AlertMessage>) in
+                    switch res {
+                    case .success(let countries):
+                        countriesTVC.countries.append(contentsOf: countries)
+                        break
+                    case .failure(let message):
+                        print("alert \(message.body)")
+                        break
+                    }
+                }
+            }
+        }
     }
-    */
 }

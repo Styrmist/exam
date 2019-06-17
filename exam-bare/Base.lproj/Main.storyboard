@@ -44,7 +44,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="regionNameLabel" destination="Xnh-pG-GYJ" id="PwW-oV-8SG"/>
-                                    <segue destination="w2J-aN-zLI" kind="show" identifier="toCountrySegue" id="PkU-IK-OQh"/>
+                                    <segue destination="w2J-aN-zLI" kind="show" identifier="toCountriesSegue" id="PkU-IK-OQh"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -304,6 +304,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="EOH-Qc-qhs" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0li-4y-4o0">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
