@@ -8,7 +8,26 @@
 
 import Foundation
 
-enum BeerModel {
+enum CountriesModel {
     
-
+    struct Country: Codable {
+        let name: String
+        let latlng: [Int]
+        let borders: [String?] //alpha 3 code
+        let nativeName: String
+        let currencies: [Currency]
+        let languages: [Language]
+        //capital?
+    }
+    
+    struct Currency: Codable {
+        let code: String
+        let name: String
+        let symbol: String
+    }
+    
+    struct Language: Codable {
+        let name: String
+        let nativeName: String
+    }
 }
