@@ -11,6 +11,11 @@
 		ED57DCDD22B77ABE005C66C6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED57DCDC22B77ABE005C66C6 /* Constants.swift */; };
 		ED57DCE222B77C82005C66C6 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED57DCE122B77C82005C66C6 /* EndPointType.swift */; };
 		ED57DCE422B77CBF005C66C6 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED57DCE322B77CBF005C66C6 /* ParameterEncoding.swift */; };
+		ED57DCE622B77D18005C66C6 /* RequestItemsType.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED57DCE522B77D18005C66C6 /* RequestItemsType.swift */; };
+		ED57DCE822B780F0005C66C6 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED57DCE722B780F0005C66C6 /* ApiManager.swift */; };
+		ED57DCEA22B78134005C66C6 /* AlertMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED57DCE922B78134005C66C6 /* AlertMessage.swift */; };
+		ED57DCEC22B781AE005C66C6 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED57DCEB22B781AE005C66C6 /* NetworkError.swift */; };
+		ED57DCEE22B7827B005C66C6 /* CountriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED57DCED22B7827B005C66C6 /* CountriesModel.swift */; };
 		EDDB19F622B6DA2B00B0F498 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDB19F522B6DA2B00B0F498 /* AppDelegate.swift */; };
 		EDDB19FB22B6DA2B00B0F498 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDDB19F922B6DA2B00B0F498 /* Main.storyboard */; };
 		EDDB19FD22B6DA2C00B0F498 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDDB19FC22B6DA2C00B0F498 /* Assets.xcassets */; };
@@ -31,6 +36,11 @@
 		ED57DCDC22B77ABE005C66C6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		ED57DCE122B77C82005C66C6 /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
 		ED57DCE322B77CBF005C66C6 /* ParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		ED57DCE522B77D18005C66C6 /* RequestItemsType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestItemsType.swift; sourceTree = "<group>"; };
+		ED57DCE722B780F0005C66C6 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		ED57DCE922B78134005C66C6 /* AlertMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMessage.swift; sourceTree = "<group>"; };
+		ED57DCEB22B781AE005C66C6 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		ED57DCED22B7827B005C66C6 /* CountriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesModel.swift; sourceTree = "<group>"; };
 		EDDB19F222B6DA2B00B0F498 /* exam-bare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "exam-bare.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDDB19F522B6DA2B00B0F498 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDDB19FA22B6DA2B00B0F498 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -102,6 +112,9 @@
 		ED57DCDF22B77AFA005C66C6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				ED57DCE922B78134005C66C6 /* AlertMessage.swift */,
+				ED57DCEB22B781AE005C66C6 /* NetworkError.swift */,
+				ED57DCED22B7827B005C66C6 /* CountriesModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -109,8 +122,10 @@
 		ED57DCE022B77B23005C66C6 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				ED57DCE722B780F0005C66C6 /* ApiManager.swift */,
 				ED57DCE122B77C82005C66C6 /* EndPointType.swift */,
 				ED57DCE322B77CBF005C66C6 /* ParameterEncoding.swift */,
+				ED57DCE522B77D18005C66C6 /* RequestItemsType.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -271,15 +286,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDDB1A1222B6E61B00B0F498 /* CountryLatinTableViewCell.swift in Sources */,
+				ED57DCEC22B781AE005C66C6 /* NetworkError.swift in Sources */,
+				ED57DCEA22B78134005C66C6 /* AlertMessage.swift in Sources */,
 				EDDB1A0822B6DFE100B0F498 /* RegionsTableViewController.swift in Sources */,
 				EDDB1A0A22B6E2E500B0F498 /* CountriesTableViewController.swift in Sources */,
 				EDDB1A0C22B6E33E00B0F498 /* CountryLatinOriginTableViewCell.swift in Sources */,
 				EDDB19F622B6DA2B00B0F498 /* AppDelegate.swift in Sources */,
+				ED57DCE622B77D18005C66C6 /* RequestItemsType.swift in Sources */,
 				ED57DCE222B77C82005C66C6 /* EndPointType.swift in Sources */,
 				ED57DCE422B77CBF005C66C6 /* ParameterEncoding.swift in Sources */,
 				ED57DCDD22B77ABE005C66C6 /* Constants.swift in Sources */,
 				EDDB1A1422B6E85A00B0F498 /* FavouriteTableViewController.swift in Sources */,
+				ED57DCE822B780F0005C66C6 /* ApiManager.swift in Sources */,
 				EDDB1A1822B6EE4E00B0F498 /* DetailViewController.swift in Sources */,
+				ED57DCEE22B7827B005C66C6 /* CountriesModel.swift in Sources */,
 				EDDB1A1022B6E5FA00B0F498 /* SearchCountriesTableViewController.swift in Sources */,
 				EDDB1A0E22B6E35200B0F498 /* RegionsTableViewCell.swift in Sources */,
 			);
