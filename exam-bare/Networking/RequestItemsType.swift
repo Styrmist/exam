@@ -14,6 +14,7 @@ enum RequestItemsType {
     case searchByRegion(query: String)
     case searchByBlock(query: String)
     case searchByFullName(query: String)
+    case searchByCode(query: String)
     case search(query: String)
 }
 
@@ -37,6 +38,8 @@ extension RequestItemsType: EndPointType {
             return "region/\(query)"
         case .searchByFullName(let query):
             return "/name/\(query)?fullText=true"
+        case .searchByCode(let query):
+            return "/alpha/\(query)"
         }
     }
     
