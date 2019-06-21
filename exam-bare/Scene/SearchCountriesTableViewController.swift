@@ -11,6 +11,8 @@ import Alamofire
 
 class SearchCountriesTableViewController: UITableViewController {
     
+    let interval = 0.1
+    var previousRun = Date()
     var countriesData = [CountriesModel.Country]()
     let apiManager = APIManager(sessionManager: SessionManager())
     let cellIdentifier = "searchCell"

@@ -9,15 +9,18 @@ extension SearchCountriesTableViewController: UISearchBarDelegate {
             return
         }
         
-        self.apiManager.call(type: RequestItemsType.search(query: textToSearch)) { (res: Swift.Result<[CountriesModel.Country], AlertMessage>) in
-            switch res {
-            case .success(let countries):
-                self.countriesData.append(contentsOf: countries)
-                self.tableView.reloadData()
-                break
-            case .failure(let message):
-                print("alert \(message.title) \(message.body)")
-                break
+        if Date().timeIntervalSince(previousRun) > interval {
+            previousRun = Date()
+            self.apiManager.call(type: RequestItemsType.search(query: textToSearch)) { (res: Swift.Result<[CountriesModel.Country], AlertMessage>) in
+                switch res {
+                case .success(let countries):
+                    self.countriesData.append(contentsOf: countries)
+                    self.tableView.reloadData()
+                    break
+                case .failure(let message):
+                    print("alert \(message.title) \(message.body)")
+                    break
+                }
             }
         }
     }
