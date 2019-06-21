@@ -142,28 +142,28 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cur.:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZeJ-KJ-rEF">
-                                        <rect key="frame" x="150" y="40" width="36" height="20.5"/>
+                                        <rect key="frame" x="150" y="40" width="37" height="20.5"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="36" id="ftF-sT-NaL"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="36" id="ftF-sT-NaL"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lgs.:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abb-5S-jvC">
-                                        <rect key="frame" x="150" y="88.5" width="36" height="20.5"/>
+                                        <rect key="frame" x="150" y="88.5" width="37" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfQ-pU-QGO">
-                                        <rect key="frame" x="196" y="40" width="42" height="20.5"/>
+                                        <rect key="frame" x="197" y="40" width="42" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XNj-dB-3lN">
-                                        <rect key="frame" x="195" y="88.5" width="43" height="20.5"/>
+                                        <rect key="frame" x="196" y="88.5" width="43" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -256,6 +256,7 @@
                                     <constraint firstItem="ZeJ-KJ-rEF" firstAttribute="leading" secondItem="abb-5S-jvC" secondAttribute="leading" id="Qd3-Lm-H8f"/>
                                     <constraint firstItem="Qdw-7R-k2v" firstAttribute="leading" secondItem="pCY-c6-EOk" secondAttribute="leading" id="Trj-wY-aPa"/>
                                     <constraint firstItem="pCY-c6-EOk" firstAttribute="top" secondItem="Qdw-7R-k2v" secondAttribute="bottom" constant="10" id="WZI-Sn-aJU"/>
+                                    <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="i7C-aH-p0P" secondAttribute="trailing" constant="309" id="YJo-dw-t77"/>
                                     <constraint firstItem="mfQ-pU-QGO" firstAttribute="trailing" secondItem="XNj-dB-3lN" secondAttribute="trailing" id="cN5-RZ-aQJ"/>
                                     <constraint firstItem="ZeJ-KJ-rEF" firstAttribute="top" secondItem="Uda-bq-aZb" secondAttribute="top" constant="40" id="cU8-XL-fr3"/>
                                     <constraint firstItem="sSv-gc-0IE" firstAttribute="top" secondItem="i7C-aH-p0P" secondAttribute="bottom" constant="8" symbolic="YES" id="fdE-Qs-oab"/>
