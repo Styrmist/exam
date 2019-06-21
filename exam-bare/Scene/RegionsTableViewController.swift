@@ -18,6 +18,7 @@ class RegionsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "Regions & Blocks"
     }
 
     // MARK: - Table view data source
@@ -52,30 +53,32 @@ class RegionsTableViewController: UITableViewController {
     }
 
     // MARK: - Navigation
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toCountriesSegue" {
             if let cellIndex = self.tableView.indexPathForSelectedRow {
                 
+                var requestType: RequestItemsType
                 var region: String
                 switch cellIndex.section {
                 case 0:
                     region = regions[cellIndex.row]
+                    requestType = RequestItemsType.searchByRegion(query: region)
                     break
                 case 1:
                     region = regionBlocks[cellIndex.row]
+                    requestType = RequestItemsType.searchByBlock(query: region)
                     break
                 default:
                     return
                 }
                 
                 let countriesTVC = segue.destination as! CountriesTableViewController
+                countriesTVC.region = region
                 
-                self.apiManager.call(type: RequestItemsType.searchByBlock(query: region)) { (res: Swift.Result<[CountriesModel.Country], AlertMessage>) in
+                self.apiManager.call(type: requestType) { (res: Swift.Result<[CountriesModel.Country], AlertMessage>) in
                     switch res {
                     case .success(let countries):
                         countriesTVC.countriesData.append(contentsOf: countries)
-                        countriesTVC.region = region
                         countriesTVC.tableView.reloadData()                        
                         break
                     case .failure(let message):

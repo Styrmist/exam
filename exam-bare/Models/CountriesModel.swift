@@ -14,11 +14,11 @@ enum CountriesModel {
         let name: String
         let latlng: [Double]
         let borders: [String] //alpha 3 codes
+        let area: Double?
         let nativeName: String
         let alpha2Code: String
         let currencies: [Currency]
         let languages: [Language]
-        //capital?
     }
     
     struct Currency: Codable {

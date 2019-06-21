@@ -29,6 +29,7 @@
 		EDDB1A1222B6E61B00B0F498 /* CountryLatinTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDB1A1122B6E61B00B0F498 /* CountryLatinTableViewCell.swift */; };
 		EDDB1A1422B6E85A00B0F498 /* FavouriteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDB1A1322B6E85A00B0F498 /* FavouriteTableViewController.swift */; };
 		EDDB1A1822B6EE4E00B0F498 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDB1A1722B6EE4E00B0F498 /* DetailViewController.swift */; };
+		EDE433D922BC3431006C900D /* SearchCountriesExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE433D822BC3431006C900D /* SearchCountriesExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		EDDB1A1122B6E61B00B0F498 /* CountryLatinTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryLatinTableViewCell.swift; sourceTree = "<group>"; };
 		EDDB1A1322B6E85A00B0F498 /* FavouriteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteTableViewController.swift; sourceTree = "<group>"; };
 		EDDB1A1722B6EE4E00B0F498 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		EDE433D822BC3431006C900D /* SearchCountriesExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCountriesExtension.swift; sourceTree = "<group>"; };
 		EE342C9B38C04ED4CB0C7BD0 /* Pods-exam-bare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-exam-bare.debug.xcconfig"; path = "Target Support Files/Pods-exam-bare/Pods-exam-bare.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				EDA4AF3322B7FA18005BD026 /* String.swift */,
+				EDE433D822BC3431006C900D /* SearchCountriesExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				EDDB1A0A22B6E2E500B0F498 /* CountriesTableViewController.swift in Sources */,
 				EDDB1A0C22B6E33E00B0F498 /* CountryLatinOriginTableViewCell.swift in Sources */,
 				EDDB19F622B6DA2B00B0F498 /* AppDelegate.swift in Sources */,
+				EDE433D922BC3431006C900D /* SearchCountriesExtension.swift in Sources */,
 				ED57DCE622B77D18005C66C6 /* RequestItemsType.swift in Sources */,
 				ED57DCE222B77C82005C66C6 /* EndPointType.swift in Sources */,
 				ED57DCDD22B77ABE005C66C6 /* Constants.swift in Sources */,

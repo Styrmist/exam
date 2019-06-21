@@ -7,7 +7,7 @@
 //
 
 import Alamofire
-import SwiftyJSON
+
 class APIManager {
     
     private let sessionManager: SessionManager
